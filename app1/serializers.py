@@ -10,7 +10,7 @@ class PrimeSerializer(serializers.ModelSerializer):
         read_only_fields = ['out']
         
     def create(self, validated_data):
-        print(validated_data)s
+        print(validated_data)
         in1 = validated_data.get('in1')
         in2 = validated_data.get('in2')
         out = []
