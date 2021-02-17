@@ -3,12 +3,15 @@ from rest_framework import serializers
 from rest_framework.fields import ReadOnlyField
 from .models import PrimeNumber
 
+#create serializer using ModelSerializer
+
 class PrimeSerializer(serializers.ModelSerializer):
     class Meta:
         model = PrimeNumber
         fields = ['id','in1','in2','out']
         read_only_fields = ['out']
-        
+
+    # AND overriding create method for needed output
     def create(self, validated_data):
         print(validated_data)
         in1 = validated_data.get('in1')

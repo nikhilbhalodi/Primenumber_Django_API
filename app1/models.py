@@ -1,6 +1,7 @@
 from django.db import models
 
 # Create your models here.
+# using 3 fields create model
 
 class PrimeNumber(models.Model):
     in1 = models.PositiveIntegerField()
